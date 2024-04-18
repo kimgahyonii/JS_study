@@ -5,6 +5,7 @@
 </head>
 
 <body>
+    <div id="div1"></div>
     <script>
         // {} Object, [] 배열
         // 배열 ["Banana", "Orange", "Apple"];을 문자열로 바꾸시오
@@ -13,6 +14,20 @@
 
         // ***을 기준으로 하나의 문자열로 만드시오
         console.log(fruits1.join("***"))
+
+        // console이 아닌 html에 Banana, Orange, Apple 따로 출력(줄바꿈해서)
+        var txt1 = "Banana<br>";
+        txt1 += "Orange<br>";
+        txt1 += "Apple<br>";
+        document.getElementById("div1").innerHTML = txt1;
+
+        // 배열을 생성해서 화면과 똑같이 출력하기
+        var arr1 = [];
+        arr.push("Banana");
+        arr.push("Orange");
+        arr.push("Apple");
+        document.getElementById("div1").innerHTML = arr1.join("<br>");
+
     </script>
 </body>
 
