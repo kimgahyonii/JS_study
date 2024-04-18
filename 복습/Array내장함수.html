@@ -23,10 +23,15 @@
 
         // 배열을 생성해서 화면과 똑같이 출력하기
         var arr1 = [];
-        arr.push("Banana");
-        arr.push("Orange");
-        arr.push("Apple");
+        arr1.push("Banana");
+        arr1.push("Orange");
+        arr1.push("Apple");
         document.getElementById("div1").innerHTML = arr1.join("<br>");
+
+        // var fruits2 = ["Banana", "Orange", "Apple"]; 배열의 가장 마지막은 제거하여 리턴한다(제거한 문자열도 출력함)
+        var fruits2 = ["Banana", "Orange", "Apple"];
+        console.log(fruits2.pop());
+        console.log(fruits2)
 
     </script>
 </body>
