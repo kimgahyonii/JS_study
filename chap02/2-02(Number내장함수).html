@@ -1,0 +1,55 @@
+<html>
+<head>
+    <title>Number 내장함수</title>
+</head>
+<body>
+    <script>
+        // console.log(Number.MAX_SAFE_INTEGER);
+        // console.log(Number.MIN_SAFE_INTEGER);
+
+        
+
+
+        // toFixed() : 지정된 소수점 자릿수까지 반올림으로 표기
+        // var x2 = 123999.562243;
+        // console.log(x2.toFixed(2)) // 소수점 두자리까지 표시 // 출력값 : 123999.56
+
+        // toPrecision()
+        // var x3 = 9.567;
+        // console.log(x3.toPrecision(2)) // 출력값 : 9.6 : 정수까지 포함된 자릿수
+
+        // var x4 = Number("10"); // 숫자로 바뀜
+        // console.log(x4+1); // 출력값 : 11
+
+        // var x5 = Number(true); // true = 1 숫자로 출력
+        // console.log(x5);
+
+        // console.log(Number("    10         ")) // 됨
+        // console.log(Number("     23       10         ")) // 안됨
+        // console.log(Number("10.13"))
+        // console.log(Number("10,33")) // 안됨
+        // console.log(Number("Choi")) // 안됨
+        // console.log(Number("10 33")) // 안됨
+
+        // parseInt() : 문자열 -> 정수
+        // 차이 "3.14" -> 3.14
+        // console.log(Number("3.14"))
+        // 차이 "3.14" -> 3
+        // console.log(parseInt("10")) // 문자열 10을 숫자 10으로 바꿔줌
+        // console.log(parseInt("10 20 30"))   // 출력 10
+        // console.log(parseInt("24 years old")) // 출력 24
+        // console.log(parseInt("years 24 old")) // 출력 Nan (error)
+        
+        // parseFloat()
+        console.log(parseFloat("10"))
+        console.log(parseFloat("13.9"))
+        console.log(parseFloat("13.9 choi")) // 출력 13.9
+
+        // parseFloat + parseInt -> Number
+
+
+
+
+    </script>
+</body>
+</html>

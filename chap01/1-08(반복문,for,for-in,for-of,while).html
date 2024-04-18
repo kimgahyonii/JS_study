@@ -1,0 +1,106 @@
+<html>
+<head>
+    <title>반복문(for, for-in, for-of, while)</title>
+</head>
+<body>
+    <script>
+        // js에서 특유의 반복문 -------------------
+        // for(var i=0; i<5; i++){
+        //     console.log("The Number is " + i);
+        // }
+
+        // // console.log(i); // 5
+        // var는 재정의 가능 ----------------------
+        // var i = 1;
+        // var len = 10;
+        // var total = 0;
+
+        // for(; i<=len; i++){
+        //     total += i;
+        // }
+        // console.log("총합은 " + total);
+
+        // break, countinue ------------------------
+        // for(var i=0; i<5; i++){
+
+        //     if(i===3){
+        //         // break;
+        //         continue; // 0 1 2 3 4
+        //     }
+        //     console.log("The Number is " + i);
+        // }
+
+        // var numbers = [43, 23, 5, 7, 99, 12, 19];
+
+        // var len = numbers.length;
+        // for(var i=0; i<len; i++){
+        //     console.log(numbers[i]);
+        // }
+
+        // 향상된 for문 ===============================================================
+        // for(var i in numbers){  
+        //     // console.log(i); // in은 배열의 index값이 찍힘
+        //     console.log(numbers[i]); 
+        // }
+
+        // index값이 아니라 값이 바로 찍힘
+        // for(var num of numbers){
+        //     console.log(num); 
+        // }
+        
+        // // object의 키 값들을 자바스크립트에서는 for문이 처리
+        // var person = {
+        //     firstName : "길동",
+        //     lastName : "홍",
+        //     age : 24
+        // }
+        // console.log(person.firstName)
+        // console.log(person.lastName)
+        // console.log(person.age)
+
+        // for in -> index
+        // person은 object
+        // object인 경우 in이 object 키 값 출력
+        // for(var i in person){
+        //     console.log(person[i])
+        // }
+
+        // object를 찍을 떄 for in, for of가 필요
+        // var cars = ["현대", "기아", "볼보", "벤츠"];
+        // for(var car in cars){
+        //     console.log(car);
+        // }
+        // for(var car of cars){
+        //     console.log(car);
+        // }
+
+
+        // var numbers = [43, 23, 5, 7, 99, 12, 19];
+        // // 반복문 내가 정의 가능
+        // // 나중에 다시 설명 함. 중요!!
+        // numbers.forEach(function(){
+
+        // })
+
+        // while문
+        // var i = 1;
+        // var total = 0;
+        // while(i<=10){
+        //     total += i;
+        //     i++;
+        // }
+        // console.log(total);
+
+        // do~while
+        var i = 11;
+        var total = 0;
+        do {
+            total += i;
+            i++;
+        }while(i<=10);
+
+        console.log(total); // 11
+
+    </script>
+</body>
+</html>

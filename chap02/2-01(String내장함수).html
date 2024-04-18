@@ -1,0 +1,144 @@
+<html>
+<head>
+    <title>String 내장 함수</title>
+</head>
+<body>
+    <script>
+        // length : 문자열의 길이를 리턴
+        // var txt = "ABCDEFGHIJKLMN";
+        // console.log(txt.length);
+
+        // indexOf : 특정한 문자열의 위치 파악
+        // var str = "Please locate where 'locate'";
+        // console.log(str.indexOf("Please")); // 0
+        // console.log(str);
+        // console.log(str.indexOf("locate"));     // 출력값 7
+        // console.log(str.indexOf("choi"));       // 출력값 -1
+
+        // if(str.indexOf("locate") > -1){
+            // console.log("locate 문자 발견");
+        // }
+
+        
+        // lastIndexOF 뒤에서 부터 찾기3.
+        // console.log(str.lastIndexOf("locate"));     // 출력값 21
+
+        // serch(indexOf를 더 많이 씀)
+        // console.log(str.search("locate")); // 7
+
+        // slice **********중요중요
+        var str = "Apple, Banana, Kiwi";
+        // console.log(str.slice(-12, -7)) // 뒤에서 부터
+        // slice(인덱스, 글자수);
+        // 7,13은 index값 ( 7 ~ 12 )
+        // console.log(str.slice(7,13));       //출력값 : Banana
+        // console.log(str.slice(7));          // 출력값 : Banana, Kiwi
+        // console.log(str.slice(-12, -6));    // 출력값 : Banana
+        // console.log(str.slice(-12));        // 출력값 : Banana, Kiwi
+
+        // substring(~)
+        // console.log(str.substring(7, 4));      //출력값 : Banana
+            
+        // substr(index, 글자수)
+        // console.log(str.substr(7, 3));      //출력값 : Banana
+
+        // var jumin1 = "070718";
+        // console.log(jumin1.substr(0, 2)); // 년도만 가져올 때
+        // console.log(jumin1.substr(2, 2)); // 년도만 가져올 때
+        // console.log(jumin1.substr(4, 2)); // 년도만 가져올 때
+
+        // var jumin2 = "2007-07-18";
+        // console.log(jumin2.substring(0,jumin2.indexOf("-"))); //2007
+        
+        // replace
+        // var str1 = "Please visit here";
+        // var str2 = str1.replace("here", "there");
+        // console.log(str1);
+        // console.log(str2);
+
+        // var str1 = "Please visit Here here here";
+        // var str2 = str1.replace("here", "there");
+        // console.log(str1);
+        // console.log(str2); // 맨 앞에 하나만 바뀜 (대소문자 구분함)
+
+        // var str3 = "Please visit here here here";
+        // var str4 = str3.replace("here", "there");
+        // console.log(str4);
+
+        // 정규표현식
+        // var str5 = "Please visit here here here";
+        // var str6 = str5.replace(/here/g, "there"); // 개수 상관없이 다
+        // console.log(str6);
+
+        // var str5 = "Please visit Here heRe HEre";
+        // var str6 = str5.replace(/here/gi, "there"); // gi = 대소문자 구분 안함
+        // console.log(str6);
+
+        // var str5 = "Please visit here here here";
+        // var str6 = str5.replace(/here/g, "there"); // g = global
+        // console.log(str6);
+
+        // var str7 = "Please visit Here heRe HEre";
+        // var str8 = str7.replace(/here/gi, "there"); // i = ignore : 대소문자 무시
+        // console.log(str8);
+
+        // 대문자로 다 출력 : uppercase
+        // var str9 = "Please visit Here HERE here";
+        // console.log(str9.toUpperCase());
+
+        // 소문자로 다 출력 : lowercase
+        // var str10 = "Please visit Here HERE here";
+        // console.log(str10.toLowerCase());
+
+        // 데이터베이스 : JOHN, john, Jhon
+        // var txt1 = "Hello";
+        // var txt2 = "World!";
+        // var txt3 = txt1 + " " + txt2;
+        // console.log(txt3)
+
+        // // 문자열 연결(무엇이든 연결)
+        // console.log(txt1.concat(" ", txt2))
+        // console.log(txt1.concat(" ", "Hong", " Love "))
+        
+        // padStart -> 상품번호 만들때
+        // var str11 = "123";
+        // 8자리 만들고 4자리 채움(나머지는 0으로 채워라)
+        // console.log("C-" + str11.padStart(8,0))
+        // console.log("C-" + str11.padStart(8,"*"))
+        
+        // 날짜 유형 맞출때
+        // 특정 자릿수를 통이랗기 위해서 사용
+        // var str12 = "5";
+        // var str12 = "15";
+        // console.log(str12.padStart(2,0));
+
+        // padEnd는 잘 안씀 : 끝을 0으로 채움
+        // var str12 = "5";
+        // var str12 = "15";
+        // console.log(str12.padEnd(4,0));
+
+        // charAt()
+        // 특정한 글자의 위치값 찾기
+        // var str13 = "Hello World";
+        // console.log(str13.charAt(1)); 글자 찾기
+
+        // split 중요중요
+        var tags = "키보드, 기계식, 블루투스";
+        // //  ,1을 하면 하나만, -1을 하면 안하겠다는 것
+        var arr1 = tags.split(", ", -1); // -> 배열로 처리하고 ,을 기준으로 구분
+        // var arr1 = tags.split(-1, -1); // 앞에 숫자 없어짐
+        console.log(arr1)
+
+
+        // var birthday = "2007-08-28";
+        // var arr2 = birthday.split("-");
+        // console.log(arr2);
+
+        // toString()
+        var x1 = 123;
+        // console.log(x1+1) //124
+        // console.log(x1.toString()+1) // 연결
+        console.log(x1.toString(2)) // 123이 이진수로 바껴서 나옴
+;    </script>
+</body>
+</html>

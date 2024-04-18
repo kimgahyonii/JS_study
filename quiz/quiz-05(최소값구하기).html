@@ -1,0 +1,40 @@
+<html>
+<head>
+    <title>최소값 구하기</title>
+</head>
+<body>
+    <script>
+        // function solution(arr){
+        //     // 자바스크립트에서 안정적으로 지원해주는 가장 작은 수
+        //     let answer, min = Number.MAX_SAFE_INTEGER;
+        //     // console.log(min);
+
+        //     for(let i = 0; i<arr.legnth; i++){
+        //         if(arr[i] < min)
+        //             min = arr[i];
+        //     }
+        //     answer = min;
+        //     return answer;
+        // }
+
+        function solution(arr){
+            // let answer = Math.max(...arr); // 최대값
+            let answer = Math.min(...arr); // 최소값
+            return answer;
+        }
+
+        let arr = [5, 7, 1, 3, 2, 9, 11];
+        // ...스프레드(전개) 연산자
+        console.log(Math.min(...arr)); // arr은 숫자가 아님
+
+
+        // let arr = [5, 7, 1, 3, 2, 9, 11];
+        // console.log(solution(arr));
+
+        // 알아서 최소값 출력
+        // console.log(Math.min(3,2,7,16));
+
+
+    </script>
+</body>
+</html>

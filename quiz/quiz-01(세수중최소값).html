@@ -1,0 +1,22 @@
+<html>
+<head>
+    <title>새 수 중 최소값 구하기</title>
+</head>
+<body>
+    <script>
+        // 100이하의 자연수 A, B , C 를 입력받아 세 수 중 가장 작은 값을 출력하는 프로그램을 작성하시오
+        function solution(a,b,c){
+            let answer;
+
+            //insert code
+            if(a < b)answer = a;
+            else answer = b;
+
+            if(c < answer) answer = c;
+
+            return answer;
+        }
+        console.log(solution(11,12,4));
+    </script>
+</body>
+</html>

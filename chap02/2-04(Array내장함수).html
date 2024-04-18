@@ -1,0 +1,194 @@
+<html>
+<head>
+    <title>Array 내장함수</title>
+</head>
+<body>
+    <div id="div1"></div>
+
+    <script>
+        // toString()
+        // {} Object / [] 배열
+        // var fruits1 = ["Banana", "Orange", "Apple"];
+        // // 배열을 문자열로 바꿔버림
+        // console.log(fruits1.toString()); 
+
+        // // join() : 하나의 문자열로 만드는 데 ***을 기준으로
+        // console.log(fruits1.join("*"));  // 출력 Banana*** ~~
+
+        
+        // var txt1 = "Banana<br>"
+        // txt1 += "Orange<br>"
+        // txt1 += "Apple<br>"
+
+        // cosnole에 출력
+        // console.log(txt1);
+        // // html에 출력
+        // document.getElementById("div1").innerHTML = txt1
+
+        //<br> 줄바꿈이 번거로움
+        // 배열 생성
+        // var arr1 = [];
+        // arr1.push("Banana");
+        // arr1.push("Orange");
+        // arr1.push("Apple");
+        // document.getElementById("div1").innerHTML = arr1.join("<br>");
+
+
+        // pop() : 배열의 가장 마지막 항목을 제거하여 리턴 (pop 은 Apple)
+        // var fruits2 = ["Banana", "Orange", "Apple"];
+        // var arr2 = fruits2.pop(); // Apple
+        // console.log(arr2)       // Apple
+        // console.log(fruits2)    // Banana, Orange
+
+        // // push() : 배열의 가장 마지막에 새로운 항목을 추가
+        // fruits2.push("Kiwi")
+        // console.log(fruits2) // Banana, Orange, Kiwi
+
+        // shift() : 배열의 첫번째 항목을 제거하여 리턴함
+        // var fruits3 = ["Banana", "Orange", "Apple"];
+        // var str = fruits3.shift(); // Banana
+        // console.log(str)        // Banana
+        // console.log(fruits3)    // Orange, Apple
+
+        // unshift() : 배열의 첫번째에 새로운 항목을 추가함
+        // var fruits4 = ["Banana", "Orange", "Apple"];
+        // fruits4.unshift("Lemon");
+        // console.log(fruits4)        // 맨 앞에 Lemone으로 바꿔줌
+        
+        // fruits4[0] = "Grape";
+        // console.log(fruits4);       // Lemone을 Grape로
+        // console.log(fruits4.length); // 4
+        // // pop push 해도 되지만 이게 더 편함
+        // fruits4[fruits4.length - 1] = "Peach";
+        // console.log(fruits4)        // (4) ['Grape', 'Banana', 'Orange', 'Peach']
+
+        // splice(a,b) : a = 시작위치, b = 삭제할 항목 수
+        //  var fruits5 = ["Banana", "Orange", "Apple"];        
+        //  fruits5.splice(1, 2);
+        //  console.log(fruits5) // Banana
+        //  // 시작은 1인데 삭제가 0 
+        //  fruits5.splice(1,0, "Lemone", "Kiwi"); 
+        // //  fruits5.splice(1,1, "Lemone", "Kiwi"); 
+        //  console.log(fruits5) 
+
+        // concat() : 두 개의 배열을 하나로 만들어줌
+        // var BTS1 = ["뷔"];
+        // var BTS2 = ["정국", "RM"];
+        // var BTS = BTS1.concat(BTS2);
+        // console.log(BTS) // BTS1, BTS2를 하나의 배열로
+
+        // slice(a,b)
+        // a부터 b-1까지 항목을 가져옴
+        // var fruits6 = ["Banana", "Orange", "Apple"];
+        // // var fruits7 = fruits6.slice(1); // 파라미터가 1이므로 1번째 부터 끝까지
+        // // var fruits7 = fruits6.slice(1,2); // Orange만 가져옴
+        // var fruits8 = fruits6.slice(1,3); // Orange, Apple
+        // console.log(fruits8) // Orange, Apple
+
+        // sort()
+        var fruits8 = ["Banana", "Orange", "Apple", "Lemon", "Kiwi"];
+        console.log(fruits8.sort()) // 알파벳별로 정렬
+
+        var points = [40, 100, 70, 21, 99];
+        // console.log(points.sort()) // 숫자를 문자로 인식하여 오름차순 정렬
+         
+        // points라는 배열에 sort 함수를 내가 지정
+        // points.sort(function(a,b) {
+        //     if(a>b)
+        //         return 1;   // return true -> 내림차순하려면 -1
+        //     else
+        //         return -1;  // return false
+        // });
+
+        // points.sort( function(a,b){
+        //   return a - b;      // 내림차순 return b - a
+        // });
+
+        // console.log(points) // 오름차순 정렬
+        // console.log(points.reverse()) // 반대로 정렬
+
+        // object 정렬
+        // 배열의 item이 object
+        // var persons = [
+        //     {name:"유재석", point:78},
+        //     {name:"김종국", point:92},
+        //     {name:"양세찬", point:76},
+        //     {name:"하  하", point:81}
+        // ]
+
+        // console.log(persons.sort()); // object에는 정렬이 적용되지 않는다.
+        // // js의 가장 큰 장점 :  function을 직접 정해줄 수 있다
+        // persons.sort(function(a,b){
+        //     if(a.point > b.point)
+        //         return 1;
+        //     else
+        //         return -1;
+        // });
+
+        // person.sort(function(a,b){
+        //     // 삼항 연산자
+        //     // return (조건) ? true : false
+        //     return (a.point > b.point) ? 1 : -1;
+        // })
+        // console.log(persons);
+
+        // ************filter() : 조건에 맞는 배열만 리턴 (너무너무 중요)***********************************************
+        //  var persons = [
+        //      {name:"유재석", point:78},
+        //      {name:"김종국", point:92},
+        //      {name:"양세찬", point:76},
+        //      {name:"하  하", point:81}
+        //  ];
+
+        //  // 배열 return 해주니까 배열로 받기 (js는 상관없이 var)
+        //  var pass = persons.filter(function(per) {
+        //      return per.point > 80;
+        // });
+
+        // console.log(pass);
+
+
+        var persons = [
+            {name:"유재석", point:78, city:"서울"},
+            {name:"김종국", point:92, city:"대구"},
+            {name:"양세찬", point:76, city:"서울"},
+            {name:"하  하", point:81, city:"제주"}
+        ];
+
+        // 배열 return 해주니까 배열로 받기 (js는 상관없이 var)
+        // var seoul = [];
+        // for(var i =0; i<persons.length; i++){
+        //     if(persons[i].city === "서울"){
+        //         seoul.push(persons[i]);
+        //     }
+        // }
+
+        // console.log(seoul);
+
+        // var seoul = persons.filter(function(per){
+        //     return per.city === "서울";
+        // });
+
+        // *************reduce******************************************
+        // var arr3 = [1,2,3,4];
+        // var total = 0;
+        // for(var x of arr3){
+        //     // console.log(x);
+        //     total += x;
+        // }
+        // console.log(total);
+
+        // reduce(a,c)
+        // a : accumulator = 누산기
+        // c : currentValue = 현재값
+        // var arr4 = [1,2,3,4];
+        // var total = arr4.reduce(function(a,c){
+        //     return a + c;
+        // });
+        // console.log(total);
+
+        // map()
+  
+    </script>
+</body>
+</html>

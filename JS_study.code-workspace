@@ -1,0 +1,14 @@
+{
+	"folders": [
+		{
+			"path": "."
+		},
+		{
+			"name": "JS_study_2024-1",
+			"path": "JS_study_2024-1"
+		}
+	],
+	"settings": {
+		"liveServer.settings.CustomBrowser": "chrome"
+	}
+}
