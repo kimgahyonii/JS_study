@@ -1,0 +1,108 @@
+<html>
+
+<head>
+    <title>String 내장함수 복습</title>
+</head>
+
+<body>
+    <script>
+        // txt = "ABCDEFGHIJKLMN 문자열의 길이를 리턴하시오
+        var txt = "ABCDEFGHIJKLMN";
+        console.log(txt.length); // 14
+
+        // str 변수를 만들고 "Please locate where 'locate'"; 에서 "Please" 문자열을 찾으시오
+        var str = "Please Locate where 'Locate'";
+        console.log(str.indexOf('Locate')); // 출력값 7
+        // 없는 값 choi를 찾으면 -1출력
+
+        // 조건문 if를 사용해서 !를 찾으면 문자 발견 출력하시오
+        var str = "Please Locate where locate!!"
+        if (str.indexOf('!')) {
+            console.log("문자 발견");
+        }
+
+        // 뒤에서 부터 Locate 문자열 찾기
+        console.log(str.lastIndexOf('locate')); // 출력값 20
+
+        // serch를 사용해서 where 찾기
+        console.log(str.search('where'));
+
+        // Apple, Banana, Kiwi에서 Banana만 출력
+        var str = "Apple, Banana, Kiwi"
+        console.log(str.slice(7, 13));
+        // Apple, Banana, Kiwi에서 Banana, Kiwi만 출력
+        console.log(str.slice(7));
+        // Apple, Banana, Kiwi에서 Banana만 출력
+        console.log(str.slice(-12, -6))
+        // Apple, Banana, Kiwi에서 Banana, Kiwi만 출력
+        console.log(str.slice(-12))
+
+
+        //substring을 이용하여 banana 출력하기
+        console.log(str.substring(7, 13)); // 미만
+        // substr이용해서 Banana 출력하기
+        console.log(str.substr(7, 6))
+
+        // 070718 에서 년도만 가져오고, 월만 가져오고, 일만 가져오는 코드 작성
+        var friends = "070718";
+        console.log(friends.substr(0, 2));
+        console.log(friends.substr(2, 2));
+        console.log(friends.substr(4, 2));
+
+        // 2007-07-18에서 년도만 출력
+        var friends2 = "2007-07-18";
+        console.log(friends2.substring(0, friends2.indexOf("-"))); // 0부터 -전까지 (미만)
+
+        // "Please visit here" 에서 here을 there로 바꿔주는 함수 사용해서 출력
+        var str1 = "Please visit here";
+        console.log(str1.replace("here", "there"));
+        // js는 대소문자 구분을 함
+        // 정규표현식을 사용
+        // 개수 상관없이 다 "Please visit here here here"; there로 바꾸기
+        var str2 = "Please visit here here here";
+        // 대입을 해서 출력가능
+        var str3 = str2.replace(/here/g, "there")
+        console.log(str3)
+        // 대소문자 구분 없이 "Please visit Here heRe HEre"; there로 바꾸기
+        var str3 = str2.replace(/here/gi, "there")
+        console.log(str3)
+
+        // "Please visit Here HERE here";를 대문자로 출력하시오
+        var str4 = "Please visit Here HERE here";
+        console.log(str4.toUpperCase())
+        console.log(str4.toLowerCase())
+
+        // 기본 8자리를 만들고 123 숫자가 들어가고 남은 자리는 0으로 채우시오
+        var str5 = "123";
+        console.log("C-" + str5.padStart(8, 0));
+
+        // 어떤 수를 넣어도 05-10형식으로 되도록 출력하시오
+        var mon = "5";
+        var day = "10";
+        console.log(mon.padStart(2, 0) + "-" + day.padStart(2, 0));
+
+        // Hello World에서 1번째 글자를 찾아서 출력하시오
+        var str6 = "Hello World"
+        console.log(str6.charAt(1));
+
+        // 키보드, 계계식, 블루투스를 ,를 기준으로 구분하여 출력하시오(배열로 처리)
+        var tags = "키보드, 기계식, 블루투스";
+        console.log(tags.split(", ", -1));
+        console.log(tags.split(-1, -1));
+
+        var birthday = "2007-03-24";
+        var arr = (birthday.split("-"))
+        console.log(arr)
+
+        // 123을 문자열로 바꿔서 출력하시오
+        var num = 123;
+        console.log(num.toString())
+
+        // 123을 8진수로 바꿔서 출력하시오
+        console.log(num.toString(8));
+
+
+    </script>
+</body>
+
+</html>
