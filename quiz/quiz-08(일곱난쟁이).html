@@ -19,12 +19,20 @@
             // console.log(sum)
 
             // 방법2 : for of를 이용한 방법
-            let sum = 0;
-            for (let x of arr) {
-                consoel.log(x);
-                sum += x;
-            }
+            // let sum = 0;
+            // for (let x of arr) {
+            //     consoel.log(x);
+            //     sum += x;
+            // }
+            // console.log(sum);
+
+            // 방법 3 : reduce() 사용
+            let sum = arr.reduce(function (a, b) {
+                return a + b;
+            });
             console.log(sum);
+
+
 
 
         }
