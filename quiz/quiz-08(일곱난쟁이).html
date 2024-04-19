@@ -1,0 +1,28 @@
+<html>
+
+<head>
+    <title>일곱난쟁이</title>
+</head>
+
+<body>
+    <script>
+        // 아홉명에서 키의 합중 100 이하 일곱난쟁이찾기 
+        function solution(arr) {
+            let answer = arr;
+
+            // 방법1 : 일반적인 for문
+            let sum = 0;
+            for (var i = 0; i < arr.length; i++) {
+                // console.log(arr[i])
+                sum += arr[i];
+            }
+            console.log(sum)
+
+
+        }
+        let arr = [20, 7, 23, 19, 10, 15, 25, 8, 13]
+        console.log(solution(arr));
+    </script>
+</body>
+
+</html>
