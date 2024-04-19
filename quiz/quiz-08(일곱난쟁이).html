@@ -11,12 +11,20 @@
             let answer = arr;
 
             // 방법1 : 일반적인 for문
+            // let sum = 0;
+            // for (var i = 0; i < arr.length; i++) {
+            //     // console.log(arr[i])
+            //     sum += arr[i];
+            // }
+            // console.log(sum)
+
+            // 방법2 : for of를 이용한 방법
             let sum = 0;
-            for (var i = 0; i < arr.length; i++) {
-                // console.log(arr[i])
-                sum += arr[i];
+            for (let x of arr) {
+                consoel.log(x);
+                sum += x;
             }
-            console.log(sum)
+            console.log(sum);
 
 
         }
