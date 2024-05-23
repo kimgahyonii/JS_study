@@ -1,0 +1,28 @@
+<html>
+
+<head>
+    <title>문자찾기</title>
+</head>
+
+<body>
+    <script>
+        function solution(s, t) {
+            let answer = 0;
+            // 방법 1
+            // for (let x of s) {
+            //     if (x === t) {
+            //         answer++;
+            //     }
+            // }
+
+            // 방법2 : split함수 사용
+            answer = (s.split(t)).length - 1;
+            return answer;
+        }
+        let str = "COMPUTERPROGRAMMINGR"
+        // [COMPUTE] R [P] R [OG] R [AMMING] R []
+        console.log(solution(str, "R"));
+    </script>
+</body>
+
+</html>
