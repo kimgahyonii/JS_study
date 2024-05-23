@@ -1,0 +1,29 @@
+<html>
+
+<head>
+    <title>대문자변환</title>
+</head>
+
+<body>
+    <script>
+        // 소문자 섞인 문자열 받고 대문자 변환해서 출력 ItisTimeToStudy
+        function solution(s) {
+
+            let answer = "";
+            for (let x of s) {
+                if (x === x.toUpperCase()) {
+                    answer += x.toLowerCase();
+                }
+                else {
+                    answer += x.toUpperCase();
+                }
+            }// for
+            return answer;
+
+        }
+        let str = "Mirim Meister School";
+        console.log(solution(str));
+    </script>
+</body>
+
+</html>
