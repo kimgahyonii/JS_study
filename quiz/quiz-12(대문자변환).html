@@ -1,0 +1,43 @@
+<html>
+
+<head>
+    <title>대문자변환</title>
+</head>
+
+<body>
+    <script>
+        // 소문자 섞인 문자열 받고 대문자 변환해서 출력 ItisTimeToStudy
+        function solution(s) {
+            // 방법1 : toLowerCase(), toUpperCase();
+            // let answer = "";
+            // for (let x of s) {
+            //     console.log(x, x.toLowercase())
+            //     if (x === x.toLowercase()) {
+            //         answer += x.toUpperCase();
+            //     }
+            //     else {
+            //         answer += x;
+            //     }
+            // }// for
+            // return answer;
+
+            // 방법2 : 아스키코드 이용
+            let answer = "";
+            for (let x of s) {
+                // console.log(x.charCodeAt()); // 아스키코드 값으로 바뀜
+                let num = x.charCodeAt();
+            
+                if (num >= 97 && num <= 122)
+                    answer += String.fromCharCode(num - 32);
+                else
+                    answer += x;
+            }
+
+            return answer;
+        }
+        let str = "ItisTimeToStudy";
+        console.log(solution(str));
+    </script>
+</body>
+
+</html>
