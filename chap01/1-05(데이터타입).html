@@ -1,163 +1,166 @@
 <html>
+
 <head>
     <title>데이터타입(String, Number, Object, Array, Undefined, Null)</title>
 </head>
+
 <body>
     <script>
-    // 문자열 String =====================================
-    let name1 = "홍길동"; 
-    let name2 = '홍길순';   // 외따옴표 가능(js)
+        // 문자열 String =====================================
+        let name1 = "홍길동";
+        let name2 = '홍길순';   // 외따옴표 가능(js)
 
-    // let str1 = "저의 이름은 " + name1 + " 입니다.";
+        // let str1 = "저의 이름은 " + name1 + " 입니다.";
 
-    // 필기 : 나의 이름은 '홍길동' 입니다.
+        // 필기 : 나의 이름은 '홍길동' 입니다.
 
-    // 바깥쪽이 외따옴표면 안쪽이 쌍따옴표
-    let str1 = "저의 이름은 '홍길동' 입니다";
-    console.log(str1);
+        // 바깥쪽이 외따옴표면 안쪽이 쌍따옴표
+        let str1 = "저의 이름은 '홍길동' 입니다";
+        console.log(str1);
 
-    let str2 = '저의 이름은 "홍길동" 입니다';
-    console.log(str2);
+        let str2 = '저의 이름은 "홍길동" 입니다';
+        console.log(str2);
 
-    // Good ( \"\" 문자열이 아님으로 인식해서 그대로 출력)
-    let str3 = '저의 이름은 \"홍길동\" 입니다';
-    console.log(str3);
+        // Good ( \"\" 문자열이 아님으로 인식해서 그대로 출력)
+        let str3 = '11저의 이름은 \"홍길동\" 입니다';
+        console.log(typeof (str3));
 
-    let str4 = '저의 이름은 \'홍길동\' 입니다';
-    console.log(str4);
+        let str4 = '저의 이름은 \'홍길동\' 입니다';
+        console.log(str4);
 
-    let str5 = '저의 이름은 \홍길동\ 입니다';
-    console.log(str5);
+        let str5 = '저의 이름은 \홍길동\ 입니다';
+        console.log(str5);
 
-    // 필기 = 저의 이름은 \홍길동\ 입니다.
-    let str6 = '저의 이름은 \\홍길동\\ 입니다';
-    console.log(str6);
-    
-    // 숫자 : Number ==========================
-    let x = 3;
-    let y = 3.14;
+        // 필기 = 저의 이름은 \홍길동\ 입니다.
+        let str6 = '저의 이름은 \\홍길동\\ 입니다';
+        console.log(str6);
 
-    console.log(x + y);
+        // 숫자 : Number ==========================
+        let x = 3;
+        let y = 3.14;
 
-    // java에서는 error -> js에서는 undefined
-    let ul;
-    console.log(ul);
+        console.log(x + y);
 
-    // undefined를 변수 값처럼 쓰기도 함
-    let u2 = undefined;
-    console.log(u2);
+        // java에서는 error -> js에서는 undefined
+        let ul;
+        console.log(ul);
 
-    // Null -> Null 그대로 출력 =================
-    let n1 = null;
-    console.log(n1);
+        // undefined를 변수 값처럼 쓰기도 함
+        let u2 = undefined; // 데이터 타입
+        console.log(u2);
 
-    // Object ===================================
-    // java object -> new / js도 객체 생성가능
-    // 객체 생성 (java : new Person1)
-    let person1 = {}
-    person1.firstName = "김";
-    // java : Student s = new Student
-    person1.lastName = "길동";
-        
-    person1.age = 20;
+        // Null -> Null 그대로 출력 =================
+        let n1 = null;
+        console.log(n1);
 
-    // console.log(person1);
+        // Object ===================================
+        // java object -> new / js도 객체 생성가능
+        // 객체 생성 (java : new Person1)
+        // let person1 = {}
+        // person1.firstName = "김";
+        // // java : Student s = new Student
+        // person1.lastName = "길동";
 
-    let person2 = {
-        firstName : "길순",
-        lastName : "홍",
-        age : 10
-    }
-    console.log(person2);
+        // person1.age = 20;
 
-    // // 객체 선언
-    let person3 ={};
-    person3["firstName"] = "철수";
-    person3["lasstName"] = "김";
-    person3["age"] = 10;
+        // console.log(person1);
 
-    // // java는 객체를 추가해서 new 해야하지만 js는 그냥 추가 가능
-    // person2.email = "hong@gmail.com";
-    // console.log(email);
+        let person2 = {
+            firstName: "길순",
+            lastName: "홍",
+            age: 10
+        }
+        console.log(person2);
 
-    // console.log(person1.firstName);
-    // console.log(person1.lastName);
-    // console.log(person1.age);
+        // // 객체 선언
+        let person3 = {};
+        person3["firstName"] = "철수";
+        person3["lasstName"] = "김";
+        person3["age"] = 10;
 
-    // person1.school = "미림";
-    // console.log(person1.school);
+        // // java는 객체를 추가해서 new 해야하지만 js는 그냥 추가 가능
+        // person2.email = "hong@gmail.com";
+        // console.log(email);
 
-    // document.write(person2.firstName);
-    // document.write(person2.lastName);
+        // console.log(person1.firstName);
+        // console.log(person1.lastName);
+        // console.log(person1.age);
 
-    // 배열 - Array -> js 배열 편함
-    // {} -> Object
-    let car = ["현대", "기아", "볼보", "테슬라", "벤츠"];       
-    console.log(car[0]);
-    console.log(car[1]);
-    console.log(car[2]);
-    console.log(car[3]);
-    console.log(car[4]);
+        // person1.school = "미림";
+        // console.log(person1.school);
 
-    let num = [3, 7, 2, 9, 12];
-    console.log(num[0]);
-    console.log(num[2]);
-    console.log(num[4]);
+        // document.write(person2.firstName);
+        // document.write(person2.lastName);
 
-    let arr1 = ["현대", 3, undefined, null];
-    console.log(arr1[0]);
-    console.log(arr1[1]);
-    console.log(arr1[2]);
-    console.log(arr1[3]);
+        // 배열 - Array -> js 배열 편함
+        // {} -> Object
+        let car = ["현대", "기아", "볼보", "테슬라", "벤츠"];
+        console.log(car[0]);
+        console.log(car[1]);
+        console.log(car[2]);
+        console.log(car[3]);
+        console.log(car[4]);
 
-    let arr2 = [person1, person2, person3]
-    console.log(arr2[0]);
-    console.log(arr2[1]);
-    console.log(arr2[2]);
+        let num = [3, 7, 2, 9, 12];
+        console.log(num[0]);
+        console.log(num[2]);
+        console.log(num[4]);
 
-    // 배열 선언
-    let arr3 = [];
-    arr3[0] = 23;
-    arr3[1] = "대한민국";
-    console.log(arr3[0]);
-    console.log(arr2[1]);
+        let arr1 = ["현대", 3, undefined, null];
+        console.log(arr1[0]);
+        console.log(arr1[1]);
+        console.log(arr1[2]);
+        console.log(arr1[3]);
 
-    // 프로그램을 많이 짜둔 상태에서 arr4를 찾아서 써야할때  push를 사용
-    let arr4 = [];
-    arr4.push(2024);
-    arr4.push("BTS");
-    arr4.push(7);
-    arr4.push(3.14);
-    arr4.push(null);
-    arr4.push(undefined);
+        let arr2 = [person1, person2, person3]
+        console.log(arr2[0]);
+        console.log(arr2[1]);
+        console.log(arr2[2]);
 
-    // console.log(arr4[0]);
-    // console.log(arr4[1]);
-    // console.log(arr4[2]);
-    // console.log(arr4[3]);
-    // console.log(arr4[4]);
-    // console.log(arr4[5]);
+        // 배열 선언
+        let arr3 = [];
+        arr3[0] = 23;
+        arr3[1] = "대한민국";
+        console.log(arr3[0]);
+        console.log(arr2[1]);
 
-    for(var i = 0; i < arr4.length; i++){
-        console.log(arr4[i]);
-        document.write(arr4[i] + "<br>");
-    }
+        // 프로그램을 많이 짜둔 상태에서 arr4를 찾아서 써야할때  push를 사용
+        let arr4 = [];
+        arr4.push(2024);
+        arr4.push("BTS");
+        arr4.push(7);
+        arr4.push(3.14);
+        arr4.push(null);
+        arr4.push(undefined);
 
-    // boolean 참 / 거짓  true or flase
-    let isAdult = true;
-    let num1 = 5;
-    let num2 = 7;
-    console.log(num1 > num2);        // false
+        // console.log(arr4[0]);
+        // console.log(arr4[1]);
+        // console.log(arr4[2]);
+        // console.log(arr4[3]);
+        // console.log(arr4[4]);
+        // console.log(arr4[5]);
 
-    console.log(typeof num1);       // number
-    console.log(typeof isAdult);    // boolean
-    console.log(typeof name1);      // String
-    console.log(typeof person1);    // object
-    // js에서는 배열을 object로 처리
-    console.log(typeof arr4);       // object
+        for (var i = 0; i < arr4.length; i++) {
+            console.log(arr4[i]);
+            document.write(arr4[i] + "<br>");
+        }
 
-    
+        // boolean 참 / 거짓  true or flase
+        let isAdult = true;
+        let num1 = 5;
+        let num2 = 7;
+        console.log(num1 > num2);        // false
+
+        console.log(typeof num1);       // number
+        console.log(typeof isAdult);    // boolean
+        console.log(typeof name1);      // String
+        console.log(typeof person1);    // object
+        // js에서는 배열을 object로 처리
+        console.log(typeof arr4);       // object
+
+
 
     </script>
 </body>
+
 </html>
